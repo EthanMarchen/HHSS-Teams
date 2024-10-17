@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Huron Heights Secondary School Teams</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="https://www2.yrdsb.ca/themes/custom/yrdsb/logo__yrdsb_desktop.svg" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <img onclick="window.location.href = 'index.html';" id="logo" src="https://www2.yrdsb.ca/themes/custom/yrdsb/logo__yrdsb_desktop.svg" alt="logo">
+<div id="title">
+    <h1>Huron Heights Secondary School Teams</h1>
+</div>
+<div id="navbar">
+    <a href="index.html"><button class="nav" style="transition: 0.6s; box-shadow: inset #3a3a3c 7px 7px 10px;">Home</button></a>
+    <a href="football.html"><button class="nav">Football</button></a>
+    <a href="soccer.html"><button class="nav">Soccer</button></a>
+    <a href="volleyball.html"><button class="nav">Volleyball</button></a>
+    <a href="basketball.html"><button class="nav">Basketball</button></a>
+</div>
+<div class="pictures">
+    <div class="center">
+        <div class="section_header">Team Pictures</div>
+    </div><br>
+    <div id="slideshow">
+        <div class="inline">
+            <div title="left img" id="left"></div>
+            <div title="center img" id="center"></div>
+            <div title="right img" id="right"></div>
+            <div id="caret-left" onclick="switchImg(0);"><i class="fa fa-caret-left"></i></div>
+            <div id="caret-right" onclick="switchImg(1);"><i class="fa fa-caret-right"></i></div>
+        </div>
+    </div>
+    <div class="inline" id="dots">
+        <div class="dot" id="dot0"></div>
+        <div class="dot" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+        <div class="dot" id="dot4"></div>
+        <div class="dot" id="dot5"></div>
+        <div class="dot" id="dot6"></div>
+        <div class="dot" id="dot7"></div>
+    </div>
+</div>
+<script>
+    const img = [
+        'https://th.bing.com/th/id/OIP.ZnRQ4dgpa02RUf40UyK7KAHaD9?rs=1&pid=ImgDetMain',
+        'https://s3.us-east-2.amazonaws.com/cfc2019/wp-content/uploads/2019/12/huron-heights-warriors.jpg',
+        'https://th.bing.com/th/id/R.b997b08fff0212e62ce7dde891c516b0?rik=YUet2DKo8ns0oQ&riu=http%3a%2f%2fmedia.zuza.com%2f3%2f6%2f360e009d-dd7b-47db-8ec2-10bcec1e7d5b%2fN-1128HuronOFSAA011___Gallery.jpg&ehk=ijWHbkoXz%2fFTIL4Kjgu9RNEhZQMd44%2fMVExbpbUk0qw%3d&risl=&pid=ImgRaw&r=0',
+        'https://th.bing.com/th/id/R.d97732aebabd9f0e784df412350216b2?rik=hvQMkfWmKoXJDg&riu=http%3a%2f%2fmedia.zuza.com%2f0%2f7%2f07c6c590-c106-471c-9938-58a76b974991%2fN-1128HuronOFSAA012___Gallery.jpg&ehk=33KeOPre2QJ3ZmVhj75PTqbB1rnYPvPDTeDd5VdVY24%3d&risl=&pid=ImgRaw&r=0',
+        'https://i.ytimg.com/vi/DKLpnE9Crkg/maxresdefault.jpg',
+        'https://th.bing.com/th/id/R.7fea1ff7a3f55836970b31f43db22812?rik=fVZD21FRhsdJgg&riu=http%3a%2f%2fmedia.zuza.com%2ff%2f3%2ff30616a8-dc28-4a5d-9199-179a6e768bb2%2fN-1128HuronOFSAA008___Gallery.jpg&ehk=bJmMum1tC%2bkhSsJROO5pewkp0y5o8984i%2fxA3tBwADQ%3d&risl=&pid=ImgRaw&r=0',
+        'https://smartcdn.gprod.postmedia.digital/nexus/wp-content/uploads/2022/09/TS20161130VH11325-e1663951553561.jpg',
+        'https://smartcdn.gprod.postmedia.digital/nexus/wp-content/uploads/2022/09/warriors-main-2-scaled-e1664213308371.jpg'
+    ]
+    var main = 0;
+    window.onload = function(){
+        document.getElementById('left').style.backgroundImage = 'url("'+img[7]+'")';
+        document.getElementById('center').style.backgroundImage = 'url("'+img[0]+'")';
+        document.getElementById('right').style.backgroundImage = 'url("'+img[1]+'")';
+        
+        document.getElementById('dot'+main).classList.add('dark');
+    }
+    function switchImg(way){
+        if(way == '0'){
+            main = main - 1;
+            if(main == '-1'){
+                main = 7;
+            }
+            if(main == 0){
+                document.getElementById('dot1').classList.remove('dark');
+                document.getElementById('dot0').classList.add('dark');
+            }
+            else if(main == 1){
+                document.getElementById('dot2').classList.remove('dark');
+                document.getElementById('dot1').classList.add('dark');
+            }
+            else if(main == 2){
+                document.getElementById('dot3').classList.remove('dark');
+                document.getElementById('dot2').classList.add('dark');
+            }
+            else if(main == 3){
+                document.getElementById('dot4').classList.remove('dark');
+                document.getElementById('dot3').classList.add('dark');
+            }
+            else if(main == 4){
+                document.getElementById('dot5').classList.remove('dark');
+                document.getElementById('dot4').classList.add('dark');
+            }
+            else if(main == 5){
+                document.getElementById('dot6').classList.remove('dark');
+                document.getElementById('dot5').classList.add('dark');
+            }
+            else if(main == 6){
+                document.getElementById('dot7').classList.remove('dark');
+                document.getElementById('dot6').classList.add('dark');
+            }
+            else if(main == 7){
+                document.getElementById('dot0').classList.remove('dark');
+                document.getElementById('dot7').classList.add('dark');
+            }
+        } else if(way == '1'){
+            main = main + 1;
+            if(main == 8){
+                main = 0;
+            }
+            if(main == 0){
+                document.getElementById('dot7').classList.remove('dark');
+                document.getElementById('dot0').classList.add('dark');
+            }
+            else if(main == 1){
+                document.getElementById('dot0').classList.remove('dark');
+                document.getElementById('dot1').classList.add('dark');
+            }
+            else if(main == 2){
+                document.getElementById('dot1').classList.remove('dark');
+                document.getElementById('dot2').classList.add('dark');
+            }
+            else if(main == 3){
+                document.getElementById('dot2').classList.remove('dark');
+                document.getElementById('dot3').classList.add('dark');
+            }
+            else if(main == 4){
+                document.getElementById('dot3').classList.remove('dark');
+                document.getElementById('dot4').classList.add('dark');
+            }
+            else if(main == 5){
+                document.getElementById('dot4').classList.remove('dark');
+                document.getElementById('dot5').classList.add('dark');
+            }
+            else if(main == 6){
+                document.getElementById('dot5').classList.remove('dark');
+                document.getElementById('dot6').classList.add('dark');
+            }
+            else if(main == 7){
+                document.getElementById('dot6').classList.remove('dark');
+                document.getElementById('dot7').classList.add('dark');
+            }
+        }
+        if(main == 7){
+            document.getElementById('left').style.backgroundImage = 'url("'+img[main - 1]+'")';
+            document.getElementById('center').style.backgroundImage = 'url("'+img[main]+'")';
+            document.getElementById('right').style.backgroundImage = 'url("'+img[0]+'")';
+        }
+        else if(main == 0){
+            document.getElementById('left').style.backgroundImage = 'url("'+img[7]+'")';
+            document.getElementById('center').style.backgroundImage = 'url("'+img[0]+'")';
+            document.getElementById('right').style.backgroundImage = 'url("'+img[1]+'")';
+        } else {
+            document.getElementById('left').style.backgroundImage = 'url("'+img[main - 1]+'")';
+            document.getElementById('center').style.backgroundImage = 'url("'+img[main]+'")';
+            document.getElementById('right').style.backgroundImage = 'url("'+img[main + 1]+'")';
+            console.log('dot'+(main - 1))
+        }
+    }
+</script>
+</body>
+</html>

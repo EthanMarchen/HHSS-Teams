@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+#title{
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://www.vmcdn.ca/f/files/newmarkettoday/images/sports/20211213-huron-heights-warriors-jq.jpeg;w=960');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0.1vh -50vh;
+    color: white;
+}
+td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#title h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 8vh;
+    margin: 0;
+}
+#title h2{
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2.5px solid #df0000;
+    border-bottom: 2.5px solid #df0000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.onpage{
+    box-shadow: inset #3a3a3c 7px 7px 10px;
+}
+button.nav{
+    padding: 2vh 1vh;
+    cursor: pointer;
+    font-size: 2vh;
+    border: none;
+    background-color: #f8f8f8;
+    box-shadow: #3a3a3c 5px 5px 10px;
+    border-radius: 4px;
+    transition: 0.4s ease-in-out;
+    margin: 0 30px;
+    width: 10vw;
+}
+button.nav:hover{
+    box-shadow: #3a3a3c 7px 7px 10px;
+}
+a{
+    font-size: 2vh;
+    color: black;
+    text-decoration: none;
+}
+img#logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    width: 12vh;
+    cursor: pointer;
+}
+#desc{
+    margin: 6vh 2vw;
+}
+#desc img{
+    width: 30vw;
+}
+#desc .right{
+    position: absolute;
+    right: 0;
+    width: 60vw;
+    padding-left: 4vw;
+    border-left: 1px solid #df0000;
+    overflow: hidden;
+}
+.right-skd{
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    margin: 0;
+}
+#desc .header{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+    margin: 0;
+}
+#desc .text{
+    margin-top: 4vh;
+}
+.text{
+    width: 40vw;
+    font-size: 2vh;
+}
+.section_header{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vh;
+    margin-bottom: 4vh;
+}
+#practice_times{
+    width: 50vw;
+    margin: 0;
+    padding: 0px 0px 0px 2vw;
+}
+.inline{
+    display: flex;
+}
+hr{
+    border: 1.5px solid #df0000;
+    width: 90vw;
+    margin: 5vw;
+}
+/*
+.schedule_table {
+    border-collapse: collapse;
+    width: 42vw;
+}
+.schedule_table td, .schedule_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+.schedule_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #df0000;
+    color: white;
+}
+.schedule_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.schedule_table tr:hover {
+    background-color: #ddd;
+}
+*/
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    border: 1px solid #ddd;
+}
+.flex-row {
+    display: flex;
+}
+.flex-cell {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.flex-header {
+    background-color: #df0000;
+    color: white;
+}
+.flex-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.flex-row:hover {
+    background-color: #ddd;
+}
+.address{
+    font-size: 1vh;
+}
+.pictures{
+    margin-top: 4vh;
+}
+.center{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slideshow{
+    margin: 0px 12.5vw;
+}
+#slideshow img{
+    margin: 0px 10vw;
+
+}
+#slideshow #left, #slideshow #right{
+    width: 15vw;
+    height: 30vh;
+    opacity: 0.5;
+    background-size: cover;
+    background-position: center;
+    margin: 5vh 5vw;
+}
+#slideshow #center{
+    width: 25vw;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#caret-left{
+    position: absolute;
+    left: 0;
+    margin-left: 5vw;
+}
+#caret-right{
+    position: absolute;
+    right: 0;
+    margin-right: 5vw;
+}
+#caret-left, #caret-right{
+    background-color: #df0000;
+    color: white;
+    font-size: 4vh;
+    padding: 3vh;
+    border-radius: 4px;
+    margin: 15vh 5vw;
+    cursor: pointer;
+    transition: 0.6s;
+}
+#caret-left:hover, #caret-right:hover{
+    animation-duration: 1s;
+    animation-name: caret-anim;
+    animation-iteration-count: 1;
+    background-color: #b40000;
+}
+@keyframes caret-anim{
+    0%{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    50%{
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    100%{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+.dot{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #b4b4b4;
+    margin: 2vh 5px;
+}
+.dark{
+    background-color: #3a3a3c;
+}
+#dots{
+    position: absolute;
+    margin-left: calc(50vw - 90px);
+}
